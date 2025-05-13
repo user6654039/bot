@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: trading-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_KEY
+        value: your_api_key
+      - key: API_SECRET
+        value: your_api_secret
+      - key: TELEGRAM_TOKEN
+        value: your_token
+      - key: CHAT_ID
+        value: your_chat_id
