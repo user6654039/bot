@@ -10,7 +10,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # === CONFIG ===
-RISK_PER_TRADE = float(input("Enter USDT to risk per trade (e.g. 5): "))
+RISK_PER_TRADE = float(os.environ.get("RISK_PER_TRADE", 5))
 RR = 2.5
 ATR_MULTIPLIER = 1.2
 SYMBOL = "XRPUSDT"
