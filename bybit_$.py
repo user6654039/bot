@@ -7,6 +7,8 @@ import requests
 import numpy as np
 from pybit.unified_trading import HTTP
 import os
+from keep_alive import keep_alive
+keep_alive()
 # === CONFIG ===
 RISK_PER_TRADE = float(input("Enter USDT to risk per trade (e.g. 5): "))
 RR = 2.5
